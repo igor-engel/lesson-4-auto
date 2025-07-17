@@ -7,7 +7,7 @@ public class NumberDigits {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите число:");
-        int number = scanner.nextInt();
+        int number = Math.abs(scanner.nextInt());
 
         int digitsSum = 0;
         int oddDigitsSum = 0;
