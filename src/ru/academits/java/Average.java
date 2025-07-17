@@ -22,41 +22,23 @@ public class Average {
 
         int allNumbersCount = 0;
         int allNumbersSum = 0;
+        int evenNumbersCount = 0;
+        int evenNumbersSum = 0;
 
         while (i <= lastNumber) {
             allNumbersSum += i;
             ++allNumbersCount;
+
+            if (i % 2 == 0) {
+                evenNumbersSum += i;
+                ++evenNumbersCount;
+            }
+
             ++i;
         }
 
         double allNumbersAverage = (double) allNumbersSum / allNumbersCount;
         System.out.println("Среднее арифметическое всех чисел = " + allNumbersAverage);
-
-        System.out.println("Для рассчёта среднего арифметического четных чисел диапазона " +
-                "ведите первое число диапазона:");
-        int firstNumber2 = scanner.nextInt();
-
-        System.out.println("Введите второе число:");
-        int lastNumber2 = scanner.nextInt();
-
-        int j = firstNumber2;
-
-        while (j >= lastNumber2) {
-            System.out.println("Второе число должно быть больше " + j + ". Введите повторно:");
-            lastNumber2 = scanner.nextInt();
-        }
-
-        int evenNumbersCount = 0;
-        int evenNumbersSum = 0;
-
-        while (j <= lastNumber) {
-            if (j % 2 == 0) {
-                evenNumbersSum += j;
-                ++evenNumbersCount;
-            }
-
-            ++j;
-        }
 
         double evenNumbersAverage = (double) evenNumbersSum / evenNumbersCount;
         System.out.println("Среднее арифметическое четных чисел = " + evenNumbersAverage);
