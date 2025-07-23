@@ -98,7 +98,7 @@ public class Person {
         System.out.println("Фамилия = " + familyName);
     }
 
-    public void printBirthYear() {
-        System.out.println("Год рождения = " + (Year.now().getValue() - age));
+    public int getBirthYear() {
+        return  Year.now().getValue() - age;
     }
 }

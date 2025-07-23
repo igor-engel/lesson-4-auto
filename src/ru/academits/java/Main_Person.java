@@ -23,6 +23,6 @@ public class Main_Person {
         person.printName();
         person.printMiddleName();
         person.printFamilyName();
-        person.printBirthYear();
+        System.out.println("Год рождения = " + person.getBirthYear());
     }
 }
